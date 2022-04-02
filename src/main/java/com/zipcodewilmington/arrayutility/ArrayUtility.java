@@ -67,4 +67,11 @@ public class ArrayUtility<ObjectType> {
         return mergedArray;
     }
 
+    public Integer countDuplicatesInMerge(ObjectType[] arrayToMerge, ObjectType valueToEvaluate) {
+        int count = 0;
+        ObjectType[] newArr = mergeArrays(intArray,arrayToMerge);
+        intArray = Arrays.copyOf(newArr,newArr.length);
+        count = getNumberOfOccurrences(valueToEvaluate);
+        return count;
+    }
 }
